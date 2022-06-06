@@ -10,21 +10,23 @@
 						</div>
 						<!-- Primary Navbar items -->
 						<div class="hidden md:flex items-center space-x-1">
-							<a href="" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Home</a>
-							<a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Services</a>
-							<a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">About</a>
-							<a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact Us</a>
+							<a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Mis Pedidos</a>
+							<a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Hombre</a>
+							<a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Mujer</a>
+							<a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Niños</a>
+							<a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Pedidos</a>
+							<a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Categorias</a>
 						</div>
 					</div>
 					<!-- Secondary Navbar items -->
 					<div class="hidden md:flex items-center space-x-3 ">
-						<a href="" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Log In</a>
-						<a href="" class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">Sign Up</a>
+						<a href="/login.php" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-blue-500 hover:text-white transition duration-300">Log In</a>
+						<a href="" class="py-2 px-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-400 transition duration-300">Sign Up</a>
 					</div>
 					<!-- Mobile menu button -->
 					<div class="md:hidden flex items-center">
 						<button class="outline-none mobile-menu-button">
-						<svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+						<svg class=" w-6 h-6 text-gray-500 hover:text-blue-500 "
 							x-show="!showMenu"
 							fill="none"
 							stroke-linecap="round"
@@ -42,10 +44,10 @@
 			<!-- mobile menu -->
 			<div class="hidden mobile-menu">
 				<ul class="">
-					<li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
-					<li><a href="#services" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</a></li>
-					<li><a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</a></li>
-					<li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
+					<li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-blue-500 font-semibold">Home</a></li>
+					<li><a href="#services" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Services</a></li>
+					<li><a href="#about" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">About</a></li>
+					<li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Contact Us</a></li>
 				</ul>
 			</div>
 			<script>

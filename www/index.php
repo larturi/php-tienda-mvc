@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tienda MVC</title>
+require_once('autoload.php');
 
-        <link rel="stylesheet" href="assets/css/main.css">
-        <link rel="stylesheet" href="./assets/css/styles.css">
-    </head>
+if(isset($_GET['controller'])) {
+    $classController = $_GET['controller'].'Controller';
+} else {
+    $classController = 'home';
+}
 
-    <body>
-
-        <!-- MENU -->
-        <?php require_once('./views/partials/navbar.php') ?>
-
-        <!-- CONTENT -->
-        <?php require_once('./views/partials/productos.php') ?>
-
-        <!-- FOOTER -->
-        <?php require_once('./views/partials/footer.php') ?>
-
-    </body>
-</html>
+if(class_exists($classController)) {
+    $controller = new $classController();
+    
+    if(isset($_GET['action']) && method_exists($controller, $_GET['action'])) {
+        $controller->{$_GET['action']}();
+    } else {
+        echo 'Error 404';
+    }
+} else {
+    echo 'Error 404';
+}

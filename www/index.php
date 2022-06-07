@@ -1,6 +1,7 @@
 <?php
 
 require_once('autoload.php');
+require_once('./views/partials/header.php');
 
 if(isset($_GET['controller'])) {
     $classController = $_GET['controller'].'Controller';
@@ -19,3 +20,5 @@ if(class_exists($classController)) {
 } else {
     echo 'Error 404';
 }
+
+require_once('./views/partials/footer.php');

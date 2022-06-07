@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda MVC - Login</title>
+    <title>Tienda MVC - Register</title>
 
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
@@ -27,21 +27,43 @@
         />
       </div>
       <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-        <form>
+        <form action="index.php?controller=user&action=create" method="post">
           <div
             class="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5"
           >
-            <p class="text-center font-semibold mx-4 mb-0">Log In</p>
+            <p class="text-center font-semibold mx-4 mb-0">Register</p>
+          </div>
+
+          <!-- Name input -->
+          <div class="mb-6">
+            <input
+              type="text"
+              class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="name"
+              name="name"
+              placeholder="First Name"
+            />
+          </div>
+
+          <!-- Apellido input -->
+          <div class="mb-6">
+            <input
+              type="text"
+              class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="apellido"
+              name="apellido"
+              placeholder="Last Name"
+            />
           </div>
 
           <!-- Email input -->
           <div class="mb-6">
             <input
-              type="text"
+              type="email"
               class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               id="email"
               name="email"
-              placeholder="Email address"
+              placeholder="Email"
             />
           </div>
 
@@ -56,32 +78,18 @@
             />
           </div>
 
-          <div class="flex justify-between items-center mb-6">
-            <div class="form-group form-check">
-              <input
-                type="checkbox"
-                class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                id="exampleCheck2"
-              />
-              <label class="form-check-label inline-block text-gray-800" for="exampleCheck2"
-                >Remember me</label
-              >
-            </div>
-            <a href="#!" class="text-gray-800">Forgot password?</a>
-          </div>
-
           <div class="text-center lg:text-left">
             <input 
                 type="submit" 
-                value="Login"
-                class="inline-block w-full px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                value="Sign Up"
+                class="inline-block px-7 w-full py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
             >
             <p class="text-sm font-semibold mt-2 pt-1 mb-0">
-              Don't have an account?
+              Do you have an account?
               <a
-                href="register.php"
+                href="login.php"
                 class="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out"
-                >Register</a
+                >Log In</a
               >
             </p>
           </div>

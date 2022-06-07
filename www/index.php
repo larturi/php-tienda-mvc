@@ -1,12 +1,13 @@
 <?php
 
-require_once('autoload.php');
-require_once('./views/partials/header.php');
+require_once 'autoload.php';
+require_once 'config/parameters.php';
+require_once './views/partials/header.php';
 
 if(isset($_GET['controller'])) {
     $classController = $_GET['controller'].'Controller';
 } else {
-    $classController = 'home';
+    $classController = DEFAULT_CONTROLLER;
 }
 
 if(class_exists($classController)) {
@@ -15,10 +16,11 @@ if(class_exists($classController)) {
     if(isset($_GET['action']) && method_exists($controller, $_GET['action'])) {
         $controller->{$_GET['action']}();
     } else {
-        echo 'Error 404';
+        $controller->{DEFAULT_ACTION}();
     }
 } else {
-    echo 'Error 404';
+    $error = new ErrorController();
+    $error->index();
 }
 
 require_once('./views/partials/footer.php');

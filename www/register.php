@@ -1,3 +1,16 @@
+<?php
+$_SESSION['register'] = '';
+require_once 'autoload.php';
+require_once 'config/parameters.php';
+require_once 'config/db.php';
+?>
+
+<?php if(isset($_SESSION['register']) && $_SESSION['register'] == 'complete') : ?>
+  <strong>Registro completado correctamente</strong>
+<?php elseif(isset($_SESSION['register']) && $_SESSION['register'] == 'failed') : ?>
+  <strong>Registro fallido</strong>
+<?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +40,7 @@
         />
       </div>
       <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-        <form action="index.php?controller=user&action=create" method="post">
+        <form action="<?=BASE_URL?>/user/create" method="post">
           <div
             class="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5"
           >
@@ -39,8 +52,8 @@
             <input
               type="text"
               class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-              id="name"
-              name="name"
+              id="nombre"
+              name="nombre"
               placeholder="First Name"
             />
           </div>
@@ -50,8 +63,8 @@
             <input
               type="text"
               class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-              id="apellido"
-              name="apellido"
+              id="apellidos"
+              name="apellidos"
               placeholder="Last Name"
             />
           </div>

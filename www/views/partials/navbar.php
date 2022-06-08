@@ -21,7 +21,7 @@
 					<!-- Secondary Navbar items -->
 					<div class="hidden md:flex items-center space-x-3 ">
 						<a href="/login.php" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-blue-500 hover:text-white transition duration-300">Log In</a>
-						<a href="" class="py-2 px-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-400 transition duration-300">Sign Up</a>
+						<a href="/register.php" class="py-2 px-2 font-medium text-white bg-blue-500 rounded hover:bg-blue-400 transition duration-300">Sign Up</a>
 					</div>
 					<!-- Mobile menu button -->
 					<div class="md:hidden flex items-center">
